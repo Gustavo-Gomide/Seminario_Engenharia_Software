@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Visual: História e Aplicação em Engenharia de Software</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="conteudos/imagens/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-columns"></i> Kanban Visual</h1>
+            <p>Da produção automotiva ao desenvolvimento ágil de software</p>
+        </div>
+        
+        <button class="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+    
+    <div class="overlay"></div>
+    
+    <nav id="main-nav">
+        <div class="nav-container">
+            <ul>
+                <li><a href="#introducao"><i class="fas fa-home"></i> Introdução</a></li>
+                <li><a href="#historia"><i class="fas fa-history"></i> História</a></li>
+                <li><a href="#metodologias-ageis"><i class="fas fa-rocket"></i> Metodologias Ágeis</a></li>
+                <li><a href="#kanban-software"><i class="fas fa-code"></i> Kanban no Software</a></li>
+                <li><a href="#caracteristicas"><i class="fas fa-star"></i> Características</a></li>
+                <li><a href="#vantagens-desvantagens"><i class="fas fa-balance-scale"></i> Vantagens/Desvantagens</a></li>
+                <li><a href="#comparacao-modelos"><i class="fas fa-project-diagram"></i> Comparação</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <section id="introducao">
+            <h2><i class="fas fa-home"></i> Introdução ao Kanban</h2>
+            
+            <div class="img-container">
+                <div class="img-card">
+                    <img src="conteudos/imagens/toyota_kanban.jpg" alt="Fábrica Toyota">
+                    <div class="img-caption">
+                        <p>Origem do Kanban na Toyota nos anos 1940</p>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="conteudos/imagens/kanban.jpg" alt="Equipe de desenvolvimento">
+                    <div class="img-caption">
+                        <p>Kanban adaptado para desenvolvimento de software</p>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="conteudos/imagens/trello.jpg" alt="Quadro Kanban digital">
+                    <div class="img-caption">
+                        <p>Ferramentas digitais modernas de Kanban</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p>O termo "Kanban" vem do japonês, onde "kan" significa "visual" ou "placa" e "ban" significa "cartão" ou "sinal". Trata-se de um sistema visual de gestão de trabalho que visa otimizar o fluxo de tarefas e reduzir desperdícios.</p>
+            
+            <p>Originalmente desenvolvido pela Toyota na década de 1940 como parte do sistema de produção Just-in-Time, o Kanban foi adaptado para o desenvolvimento de software no início dos anos 2000, tornando-se uma das principais metodologias ágeis utilizadas por equipes de tecnologia.</p>
+            
+            <div class="img-container">
+                <div class="img-card maior">
+                    <img src="conteudos/imagens/cartao-kanban.jpg" alt="Cartão Kanban físico">
+                    <div class="img-caption">
+                        <p>Cartão Kanban original usado na Toyota</p>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="conteudos/imagens/just_in_time.jpeg" alt="Linha de produção automotiva">
+                    <div class="img-caption">
+                        <p>Sistema de produção Just-in-Time da Toyota</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="historia">
+            <h2><i class="fas fa-history"></i> História do Kanban</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>Década de 1940</h3>
+                        <img src="conteudos/imagens/ohno.jpg" alt="Toyota anos 40" class="timeline-img">
+                        <p>Taiichi Ohno, engenheiro da Toyota, desenvolve o sistema Kanban como parte do método de produção Just-in-Time (JIT). O objetivo era melhorar a eficiência e reduzir desperdícios na fabricação de carros.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>Década de 1950-1970</h3>
+                        <img src="conteudos/imagens/Toyota_Production_System.jpg" alt="Expansão do Kanban" class="timeline-img">
+                        <p>O sistema Kanban é refinado e expandido dentro da Toyota, tornando-se um componente fundamental do Toyota Production System (TPS). O método se espalha por outras indústrias japonesas.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>Década de 1980</h3>
+                        <img src="conteudos/imagens/Lean_Manufacturing.jpg" alt="Lean Manufacturing" class="timeline-img">
+                        <p>O conceito de Lean Manufacturing (Produção Enxuta) ganha atenção global, com o Kanban como uma de suas principais ferramentas. O ocidente começa a adotar essas práticas.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>2001</h3>
+                        <img src="conteudos/imagens/manifesto_agil.jpg" alt="Manifesto Ágil" class="timeline-img">
+                        <p>O Manifesto Ágil é publicado, estabelecendo os princípios para o desenvolvimento ágil de software. Embora o Kanban não seja mencionado diretamente, seus princípios se alinham com a filosofia ágil.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>2004</h3>
+                        <img src="conteudos/imagens/david_anderson.png" alt="David J. Anderson" class="timeline-img">
+                        <p>David J. Anderson começa a aplicar os princípios do Kanban ao gerenciamento de projetos de software, adaptando o método da manufatura para o desenvolvimento de tecnologia.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>2010</h3>
+                        <img src="conteudos/imagens/kanban_book.jpg" alt="Livro Kanban" class="timeline-img">
+                        <p>David J. Anderson publica "Kanban: Successful Evolutionary Change for Your Technology Business", formalizando o método Kanban para desenvolvimento de software.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>Atualmente</h3>
+                        <img src="conteudos/imagens/kanban_atual.jpg" alt="Kanban moderno" class="timeline-img">
+                        <p>O Kanban é amplamente adotado em equipes de desenvolvimento de software e outros setores, com ferramentas digitais como Trello, Jira e Asana popularizando o método.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/G153ZeaU4BE?si=13La9-S3ueJJb3sY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            
+            <div class="quote">
+                "O Kanban é mais do que um sistema de gestão visual - é uma filosofia de melhoria contínua que pode transformar a maneira como as equipes trabalham."
+                <span class="quote-author">- David J. Anderson</span>
+            </div>
+        </section>
+        
+        <section id="metodologias-ageis">
+            <h2><i class="fas fa-rocket"></i> Metodologias Ágeis e o Kanban</h2>
+            
+            <div class="img-container">
+                <div class="img-card">
+                    <img src="conteudos/imagens/manifesto-agil-valores.jpg">
+                    <div class="img-caption">
+                        <p>Assinatura do Manifesto Ágil em 2001</p>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="conteudos/imagens/scrum.jpg" alt="Quadro Scrum">
+                    <div class="img-caption">
+                        <p>Quadro Scrum com sprints definidos</p>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="conteudos/imagens/Quadro-Kanban.png" alt="Quadro Kanban">
+                    <div class="img-caption">
+                        <p>Quadro Kanban com fluxo contínuo</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p>O movimento ágil surgiu como resposta às limitações dos modelos tradicionais de desenvolvimento de software, como o modelo em cascata. Em 2001, 17 desenvolvedores se reuniram em Snowbird, Utah, e publicaram o <strong>Manifesto Ágil</strong>:</p>
+            
+            <div class="img-container">
+                <div class="img-card maior">
+                    <img src="conteudos/imagens/cascata.png" alt="Modelo Cascata">
+                    <div class="img-caption">
+                        <p>Modelo tradicional em cascata</p>
+                    </div>
+                </div>
+                <div class="img-card maior">
+                    <img src="conteudos/imagens/metodo-agile.jpg" alt="Modelo Ágil">
+                    <div class="img-caption">
+                        <p>Modelo ágil iterativo</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Principais metodologias ágeis:</h3>
+            <div class="img-container">
+                <div class="img-card">
+                    <img src="conteudos/imagens/scrum.jpg" alt="Scrum">
+                    <div class="img-caption">
+                        <h4>Scrum</h4>
+                        <p>Sprints fixos, papéis definidos e cerimônias específicas</p>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="conteudos/imagens/xp.jpg" alt="XP">
+                    <div class="img-caption">
+                        <h4>Extreme Programming (XP)</h4>
+                        <p>Programação em par, TDD e integração contínua</p>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="conteudos/imagens/kanban.jpg" alt="Kanban">
+                    <div class="img-caption">
+                        <h4>Kanban</h4>
+                        <p>Fluxo contínuo com limites de WIP e melhoria incremental</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quote">
+                "O Kanban se destaca entre as metodologias ágeis por sua simplicidade visual e capacidade de se adaptar a qualquer fluxo de trabalho existente."
+                <span class="quote-author">- Jeff Sutherland, co-criador do Scrum</span>
+            </div>
+        </section>
+        
+        <section id="kanban-software">
+            <h2><i class="fas fa-code"></i> Kanban no Desenvolvimento de Software</h2>
+            
+            
+                <div class="img-card grande">
+                    <img src="conteudos/imagens/kanban_software.jpg" alt="Kanban">
+                    <div class="img-caption">
+                    </div>
+                </div>
+            
+            <div class="kanban-board">
+                <div class="kanban-column">
+                    <div class="column-header">Backlog</div>
+                    <div class="kanban-card">
+                        <img src="conteudos/imagens/api_img.png" class="card-img" alt="Tarefa 1">
+                        <p>Criar API de autenticação</p>
+                    </div>
+                    <div class="kanban-card">
+                        <img src="conteudos/imagens/filtro.jpg" class="card-img" alt="Tarefa 2">
+                        <p>Implementar busca por filtros</p>
+                    </div>
+                </div>
+                <div class="kanban-column">
+                    <div class="column-header">Em Desenvolvimento (WIP:3)</div>
+                    <div class="kanban-card">
+                        <img src="conteudos/imagens/design.jpg" class="card-img" alt="Tarefa 3">
+                        <p>Design da página de perfil</p>
+                    </div>
+                </div>
+                <div class="kanban-column">
+                    <div class="column-header">Em Teste (WIP:2)</div>
+                    <div class="kanban-card">
+                        <img src="conteudos/imagens/bug_login.jpg" class="card-img" alt="Tarefa 4">
+                        <p>Correção de bugs no login</p>
+                    </div>
+                </div>
+                <div class="kanban-column">
+                    <div class="column-header">Concluído</div>
+                    <div class="kanban-card">
+                        <img src="conteudos/imagens/aplicativo.jpg" class="card-img" alt="Tarefa 5">
+                        <p>Configuração inicial do projeto</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="img-container">
+                <div class="img-card">
+                    <img src="conteudos/imagens/trello.jpg" alt="Trello">
+                    <div class="img-caption">
+                        <h4>Trello</h4>
+                        <p>Ferramenta popular baseada em Kanban</p>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="conteudos/imagens/jira.png" alt="Jira">
+                    <div class="img-caption">
+                        <h4>Jira</h4>
+                        <p>Ferramenta profissional com quadros Kanban</p>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="conteudos/imagens/asana.jpg" alt="Asana">
+                    <div class="img-caption">
+                        <h4>Asana</h4>
+                        <p>Gerenciamento de tarefas com visão Kanban</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="caracteristicas">
+            <h2><i class="fas fa-star"></i> Características Principais do Kanban</h2>
+            
+            <div class="img-container">
+                <div class="img-card">
+                    <img src="conteudos/imagens/fluxo.jpg" alt="Visualização">
+                    <div class="img-caption">
+                        <h4>1. Visualização do Fluxo</h4>
+                        <p>Quadros visuais com cartões representando tarefas</p>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="conteudos/imagens/wip.png" alt="Limitação WIP">
+                    <div class="img-caption">
+                        <h4>2. Limitação de WIP</h4>
+                        <p>Controle do número máximo de tarefas em cada etapa</p>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="conteudos/imagens/kanban_software.jpg" alt="Fluxo Contínuo">
+                    <div class="img-caption">
+                        <h4>3. Fluxo Contínuo</h4>
+                        <p>Movimentação constante das tarefas até a conclusão</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="img-container">
+                <div class="img-card">
+                    <img src="conteudos/imagens/feedback.jpg" alt="Feedback">
+                    <div class="img-caption">
+                        <h4>4. Feedback Constante</h4>
+                        <p>Identificação de gargalos e oportunidades de melhoria</p>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="conteudos/imagens/flexibilidade.jpg" alt="Flexibilidade">
+                    <div class="img-caption">
+                        <h4>5. Flexibilidade</h4>
+                        <p>Adaptável a diferentes contextos e necessidades</p>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="conteudos/imagens/eficiencia.jpg" alt="Eficiência">
+                    <div class="img-caption">
+                        <h4>6. Foco na Eficiência</h4>
+                        <p>Redução de desperdícios e otimização do tempo</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quote">
+                "A beleza do Kanban está em sua simplicidade. Qualquer equipe pode começar hoje mesmo, com apenas um quadro, alguns post-its e a vontade de melhorar continuamente."
+                <span class="quote-author">- Taiichi Ohno, criador do sistema Kanban</span>
+            </div>
+        </section>
+
+        <section id="vantagens-desvantagens">
+            <h2><i class="fas fa-balance-scale"></i> Vantagens e Desvantagens do Kanban</h2>
+            
+            <div class="img-container">
+                <div class="img-card maior">
+                    <img src="conteudos/imagens/positivo.jpg" alt="Vantagens Kanban">
+                    <div class="img-caption">
+                        <h4>Vantagens do Kanban</h4>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Visualização clara do fluxo de trabalho</li>
+                            <li><i class="fas fa-check-circle"></i> Flexibilidade para mudanças</li>
+                            <li><i class="fas fa-check-circle"></i> Redução de desperdícios e estoques</li>
+                            <li><i class="fas fa-check-circle"></i> Melhoria contínua do processo</li>
+                            <li><i class="fas fa-check-circle"></i> Entrega mais rápida de valor</li>
+                            <li><i class="fas fa-check-circle"></i> Fácil implementação e adoção</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="img-card maior">
+                    <img src="conteudos/imagens/negativo.jpg" alt="Desvantagens Kanban">
+                    <div class="img-caption">
+                        <h4>Desvantagens do Kanban</h4>
+                        <ul>
+                            <li><i class="fas fa-exclamation-circle"></i> Pode faltar estrutura para equipes inexperientes</li>
+                            <li><i class="fas fa-exclamation-circle"></i> Dificuldade em estimar prazos exatos</li>
+                            <li><i class="fas fa-exclamation-circle"></i> Requer disciplina para manter o quadro atualizado</li>
+                            <li><i class="fas fa-exclamation-circle"></i> Pode não ser ideal para projetos com requisitos muito fixos</li>
+                            <li><i class="fas fa-exclamation-circle"></i> Depende da maturidade da equipe</li>
+                            <li><i class="fas fa-exclamation-circle"></i> Pode ter dificuldade em lidar com dependências complexas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quote">
+                "O Kanban oferece flexibilidade, mas requer disciplina. Sua simplicidade é sua força, mas pode ser uma armadilha para equipes que precisam de mais estrutura."
+                <span class="quote-author">- Especialista em Gestão Ágil</span>
+            </div>
+        </section>
+
+        <section id="comparacao-modelos">
+            <h2><i class="fas fa-project-diagram"></i> Comparação com Outros Modelos</h2>
+            
+            <div class="img-container">
+                <div class="img-card maior">
+                    <img src="conteudos/imagens/cascata.png" alt="Modelo Cascata">
+                    <div class="img-caption">
+                        <h4>Cascata vs Kanban</h4>
+                        <p><strong>Cascata:</strong> Sequencial, fases rígidas, documentação extensa<br>
+                        <strong>Kanban:</strong> Contínuo, flexível, documentação just-in-time</p>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="conteudos/imagens/iterativo.jpg" alt="Modelo Iterativo">
+                    <div class="img-caption">
+                        <h4>Iterativo vs Kanban</h4>
+                        <p><strong>Iterativo:</strong> Ciclos fixos, entregas parciais<br>
+                        <strong>Kanban:</strong> Fluxo contínuo, sem iterações fixas</p>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="conteudos/imagens/caos.jpg" alt="Modelo Caótico">
+                    <div class="img-caption">
+                        <h4>Caótico vs Kanban</h4>
+                        <p><strong>Caótico:</strong> Sem processos definidos, reativo<br>
+                        <strong>Kanban:</strong> Processo visualizado e controlado</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="img-container">
+                <div class="img-card">
+                    <img src="conteudos/imagens/espiral.jpg" alt="Modelo Espiral">
+                    <div class="img-caption">
+                        <h4>Espiral vs Kanban</h4>
+                        <p><strong>Espiral:</strong> Focado em riscos, ciclos longos<br>
+                        <strong>Kanban:</strong> Focado em fluxo, ciclos curtos</p>
+                    </div>
+                </div>
+                <div class="img-card maior">
+                    <img src="conteudos/imagens/incremental.jpg" alt="Modelo Incremental">
+                    <div class="img-caption">
+                        <h4>Incremental vs Kanban</h4>
+                        <p><strong>Incremental:</strong> Entregas planejadas em blocos<br>
+                        <strong>Kanban:</strong> Entregas contínuas de pequenos incrementos</p>
+                    </div>
+                </div>
+                <div class="img-card">
+                    <img src="conteudos/imagens/duvida.jpg" alt="Comparação Geral">
+                    <div class="img-caption">
+                        <h4>Quando usar cada modelo</h4>
+                        <p><strong>Kanban:</strong> Manutenção, melhorias contínuas<br>
+                        <strong>Outros modelos:</strong> Projetos com requisitos mais definidos ou necessidades específicas</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quote">
+                "Nenhum modelo é universalmente melhor. A escolha entre Kanban, cascata ou outros depende do contexto do projeto, da equipe e dos objetivos específicos."
+                <span class="quote-author">- Especialista em Gestão de Projetos</span>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <h3>Kanban em Engenharia de Software</h3>
+            
+            <div class="social-links">
+                <a title="Gustavo Gomide" href="https://github.com/Gustavo-Gomide" target="_blank"><i class="fab fa-github"></i></a>
+                <a title="Victor Rego" href="https://github.com/VictorRMRibeiro" target="_blank"><i class="fab fa-github"></i></a>
+                <a title="Victor Kazuo" href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a title="Germano Neto" href="https://github.com/ogermanooo" target="_blank"><i class="fab fa-github"></i></a>
+                <a title="Yan Reis" href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a title="Lucas Malaguti" href="#" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            
+            <p>Desenvolvido por Gustavo Gomide, Victor Rego, Victor Kazuo, <br> Germano Neto, Yan Reis, Lucas Malaguti <br> - 2025 -</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
