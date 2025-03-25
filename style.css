@@ -129,6 +129,10 @@ section {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+section {
+    padding: 1em;
+}
+
 h1, h2, h3 {
     color: var(--primary);
 }
@@ -350,6 +354,100 @@ h3 {
 }
 
 /* Seções específicas */
+.principios {
+    display: flex; /* Coloca as duas listas lado a lado */
+    justify-content: space-between; /* Distribui o espaço entre as listas */
+    max-width: 600px; /* Largura máxima do container (ajuste conforme necessário) */
+    margin: 0 auto; /* Centraliza o container na página */
+    padding: 20px;
+    font-family: Arial, sans-serif; /* Fonte padrão */
+}
+
+
+.principios ul {
+    list-style-type: none; /* Remove os marcadores padrão das listas */
+    padding: 0;
+    margin: 0;
+    width: 48%; /* Largura de cada lista (ajuste conforme necessário) */
+}
+
+.principios ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.principios li::before {
+    content: "+";
+    color: var(--secondary); /* Cor do marcador */
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+
+.principios li {
+    padding: 8px 0; /* Espaçamento vertical entre os itens */
+    border-bottom: 1px solid #eee; /* Linha divisória sutil entre os itens */
+}
+
+.principios li:last-child {
+    border-bottom: none; /* Remove a borda do último item */
+}
+
+/* Estilos adicionais opcionais para hover */
+.principios li:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.principios {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as quebras de linha em telas pequenas */
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    gap: 20px; /* Espaço entre as colunas */
+}
+
+.principios ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: calc(50% - 10px); /* Considera o gap */
+    min-width: 250px; /* Largura mínima antes de quebrar */
+    flex-grow: 1; /* Permite que as ULs cresçam igualmente */
+}
+
+.principios li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s; /* Suaviza o hover */
+}
+
+/* Media Query para dispositivos móveis */
+@media (max-width: 600px) {
+    .principios {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .principios ul {
+        width: 100%; /* Ocupa toda a largura em mobile */
+    }
+    
+    .principios li {
+        padding: 12px 0; /* Aumenta o touch area para mobile */
+    }
+}
+
+/* Efeito hover moderno */
+.principios li:hover {
+    background-color: var(--light);
+    transform: translateX(3px);
+}
+
 #vantagens-desvantagens ul, 
 #comparacao-modelos ul {
     padding-left: 20px;
