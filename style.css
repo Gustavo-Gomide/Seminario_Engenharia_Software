@@ -520,6 +520,10 @@ footer {
     body {
         padding-top: 60px;
     }
+
+    section {
+        padding: 1em;
+    }
     
     header {
         padding: 2rem 0;
